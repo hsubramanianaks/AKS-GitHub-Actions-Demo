@@ -93,7 +93,7 @@ jobs:
 
       # Deploys application based on given manifest file
       - name: Deploys application
-        uses: hsubramanianaks/k8s-deploy@v3.4
+        uses: hsubramanianaks/k8s-deploy@v3.5
         with:
           action: deploy
           manifests: |
