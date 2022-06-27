@@ -5,16 +5,16 @@ name: Build and deploy an app to AKS
             - main
     workflow_dispatch: {}
 env:
-    AZURE_CONTAINER_REGISTRY: oliverfour
-    CLUSTER_NAME: kingoliver
-    CONTAINER_NAME: your-container-name
+    AZURE_CONTAINER_REGISTRY: haricontainerregistry007
+    CLUSTER_NAME: hari-github-actions
+    CONTAINER_NAME: hari-github-actions
     DEPLOYMENT_MANIFEST_PATH: |
         /manifests/azure-vote-backend-deployment.yaml
         /manifests/azure-vote-backend-service.yaml
         /manifests/azure-vote-frontend-deployment.yaml
         /manifests/azure-vote-frontend-service.yaml
-    IMAGE_PULL_SECRET_NAME: your-image-pull-secret-name
-    RESOURCE_GROUP: kingoliver
+    IMAGE_PULL_SECRET_NAME: acr-secret
+    RESOURCE_GROUP: hari-github-actions
 jobs:
     buildImage:
         permissions:
