@@ -36,7 +36,7 @@ env:
   CONTAINER_NAME: "azure-voting-app"
   RESOURCE_GROUP: "hari-github-actions"
   CLUSTER_NAME: "hariAKSCluster"
-  IMAGE_PULL_SECRET_NAME: "acr-secret2"
+  IMAGE_PULL_SECRET_NAME: "acr-secret"
 
 jobs:
   build:
@@ -54,9 +54,9 @@ jobs:
       - name: Azure login
         uses: azure/login@v1.4.3
         with:
-          client-id: 03e420a8-d5ef-4ea5-b7ad-aaac8c6a386f
-          tenant-id: 72f988bf-86f1-41af-91ab-2d7cd011db47
-          subscription-id: 8ecadfc9-d1a3-4ea4-b844-0d9f87e4d7c8
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       # Builds and pushes an image up to your Azure Container Registry
       - name: Build and push image to ACR
