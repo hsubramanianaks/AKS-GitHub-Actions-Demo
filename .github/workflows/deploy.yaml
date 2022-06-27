@@ -34,8 +34,8 @@ on:
 env:
   AZURE_CONTAINER_REGISTRY: "haricontainerregistry007"
   CONTAINER_NAME: "azure-voting-app"
-  RESOURCE_GROUP: "github-action-testing"
-  CLUSTER_NAME: "github-action-testing-cluster"
+  RESOURCE_GROUP: "hari-github-actions"
+  CLUSTER_NAME: "hariAKSCluster"
   IMAGE_PULL_SECRET_NAME: "acr-secret2"
 
 jobs:
