@@ -1,19 +1,19 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: "kingoliver-03c2"
+  name: "hari-github-actions"
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: "kingoliver-03c2"
+      app: "hari-github-actions"
   template:
     metadata:
       labels:
-        app: "kingoliver-03c2"
+        app: "hari-github-actions"
     spec:
       containers:
-        - name: "kingoliver-03c2"
-          image: "newacroliver.azurecr.io/kingoliver"
+        - name: "hari-github-actions"
+          image: "haricontainerregistry007.azurecr.io/azurevote"
           ports:
           - containerPort: 80
