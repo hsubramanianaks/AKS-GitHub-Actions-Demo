@@ -36,7 +36,7 @@ env:
   CONTAINER_NAME: "azure-voting-app"
   RESOURCE_GROUP: "hari-github-actions"
   CLUSTER_NAME: "hari-github-actions-cluster"
-  IMAGE_PULL_SECRET_NAME: "acr-secret"
+  IMAGE_PULL_SECRET_NAME: "acr-secret2"
 
 jobs:
   build:
