@@ -32,11 +32,11 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_CONTAINER_REGISTRY: "kingoliverDemoAcr"
+  AZURE_CONTAINER_REGISTRY: "haricontainerregistry007"
   CONTAINER_NAME: "azure-voting-app"
-  RESOURCE_GROUP: "kingoliver-demo"
-  CLUSTER_NAME: "kingoliver-demo-cluster"
-  IMAGE_PULL_SECRET_NAME: "image-pull-secret-name"
+  RESOURCE_GROUP: "hari-github-actions"
+  CLUSTER_NAME: "hari-github-actions-cluster"
+  IMAGE_PULL_SECRET_NAME: "acr-secret"
 
 jobs:
   build:
@@ -48,15 +48,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Checks out the repository this file is in
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
 
       # Logs in with your Azure credentials
       - name: Azure login
         uses: azure/login@v1.4.3
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          client-id: 1e44c09d-3f3b-4f24-ade5-ce850f16942a
+          tenant-id: 72f988bf-86f1-41af-91ab-2d7cd011db47
+          subscription-id: 8ecadfc9-d1a3-4ea4-b844-0d9f87e4d7c8
 
       # Builds and pushes an image up to your Azure Container Registry
       - name: Build and push image to ACR
