@@ -15,8 +15,6 @@ env:
         ./manifests/azure-vote-backend-service.yaml
         ./manifests/azure-vote-frontend-deployment.yaml
         ./manifests/azure-vote-frontend-service.yaml
-        ./manifests/deployment.yml
-        ./manifests/service.yml
     IMAGE_PULL_SECRET_NAME: your-image-pull-secret-name
 jobs:
     buildImage:
