@@ -34,8 +34,8 @@ on:
 env:
   AZURE_CONTAINER_REGISTRY: "haricontainerregistry007"
   CONTAINER_NAME: "azure-voting-app"
-  RESOURCE_GROUP: "hari-github-actions"
-  CLUSTER_NAME: "hariAKSCluster"
+  RESOURCE_GROUP: "hari-bridge-kubernetes"
+  CLUSTER_NAME: "hariaks"
   IMAGE_PULL_SECRET_NAME: "acr-secret"
 
 jobs:
@@ -93,7 +93,7 @@ jobs:
 
       # Deploys application based on given manifest file
       - name: Deploys application
-        uses: hsubramanianaks/k8s-deploy@v3.7
+        uses: Azure/k8s-deploy@v4.1
         with:
           action: deploy
           manifests: |
